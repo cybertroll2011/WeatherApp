@@ -1,0 +1,185 @@
+.offerCity{
+    width: 300px;
+    position: relative;
+}
+.input__wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.inputCity{
+    width: 90%;
+    height: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    font-size: 16px;
+    border: none;
+    border-radius: 16px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: .2s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+.inputCity:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.inputCity:focus{
+    border: 2px solid #828DFF;
+}
+.searchCity{
+    width: 10%;
+    background-color: #828DFF;
+    border: none;
+    border-radius: 16px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    transition: .2s ease;
+}
+.searchCity:hover{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.bi-search{
+    fill: white;
+    pointer-events: none;
+}
+.searchCity:hover .bi-search{
+    fill: #828DFF;
+}
+.offeredCityWrapper{
+    width: 100%;
+    min-height: 40px;
+    max-height: 300px;
+    background-color: #fff;
+    border: 2px solid #D0D0D0;
+    border-radius: 8px;
+    overflow: auto;
+    box-sizing: border-box;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+.offeredCityWrapper p{
+    position: relative;
+    z-index: 100000;
+}
+.offeredCityWrapper::after{
+    content: "Offered cities...";
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    font-style: italic;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 1;
+}
+.offeredCityWrapper::-webkit-scrollbar{
+    width: 7px;
+}
+.offeredCityWrapper::-webkit-scrollbar-track{
+    background-color: #F0F0F0;
+    border-radius: 8px;
+}
+.offeredCityWrapper::-webkit-scrollbar-thumb{
+    background-color: #C7C7C7;
+    border-radius: 8px;
+}
+.offeredCity{
+    list-style: none;
+    border-bottom: 2px solid #D0D0D0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: .1s ease;
+    position: relative;
+    z-index: 2;
+}
+.offeredCityBtn{
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    font-style: italic;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.offeredCityBtn:hover{
+    background-color: #DBDBDB;
+}
+
+.lds-facebook {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 25px;
+    left: calc(50% - 40px);
+}
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #828DFF;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #000;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+@keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+}
+  
+
+@media( max-width: 850px ){
+    .inputCity{
+        width: 85%;
+    }
+    .searchCity{
+        width: 15%;
+    }
+}
+@media( max-width: 750px ){
+    .offerCity{
+        width: 60%;
+    }
+    .inputCity{
+        width: 100%;
+    }
+}
+@media( max-width: 545px ){
+    .offerCity{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .inputCity{
+        width: 80%;
+    }
+    .searchCity{
+        width: 20%;
+    }
+}
